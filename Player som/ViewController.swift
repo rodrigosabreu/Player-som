@@ -13,6 +13,14 @@ class ViewController: UIViewController {
 
     var player = AVAudioPlayer()
     
+    @IBOutlet var sliderVolume: UISlider!
+    
+    @IBAction func atualizarVolume(_ sender: Any) {
+        print(sliderVolume.value)
+        player.volume = sliderVolume.value
+        
+    }
+    
     @IBAction func play(_ sender: Any) {
         player.play()
     }
